@@ -1,0 +1,32 @@
+﻿@model List<Orders>
+
+@{
+	ViewData["Title"] = "Order List";
+}
+
+<div class="align-content-center">
+	<h1 class="display-4">Order Details</h1>
+</div>
+
+<table class="table table-striped">
+	<tr>
+		<th>Order ID</th>
+		<th>Amount</th>
+		<th>Order Date</th>
+		<th>Order Status</th>
+	</tr>
+	<tbody>
+		@{
+			foreach(var orders in Model)
+			{
+				<tr>
+				<td>@orders.OrderId</td>
+				<td>@orders.TotalAmount</td>
+				<td>@orders.OrderDate</td>
+				<td>@orders.OrderStatus</td>
+				</tr>
+			}
+		}
+		</tbody>
+	</table>
+

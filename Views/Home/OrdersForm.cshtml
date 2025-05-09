@@ -1,0 +1,35 @@
+﻿@model Orders
+
+@{
+	ViewData["Title"] = "Orders Form";
+
+}
+
+<div class="align-content-center">
+
+	<h1 class="display-4">Enter the Order Details</h1>
+</div>
+
+<form class="form-control align-content-center" asp-controller="Home" asp-action="AddOrder">
+
+
+	<label class="mt-4"> Order Amount: </label>
+	<input type="number" class="form-control" asp-for="TotalAmount" />
+
+	<label class="mt-4"> Order Date: </label>
+	<input type="date" class="form-control" asp-for="OrderDate" />
+
+	<label class="mt-4"> Order Status: </label>
+	<select class="form-control" asp-for="OrderStatus">
+		<option value="Pending">Pending</option>
+		<option value="Shipped">Shipped</option>
+		<option value="Delivered">Delivered</option>
+	</select>
+
+	<button class="btn btn-primary mt-4" type="submit">Submit</button>
+
+
+</form>
+
+
+
